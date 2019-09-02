@@ -186,6 +186,7 @@
 - LEAVE REQUEST : Fix non explicit exception on leave line select.
 - RawMaterialRequirement report: fix sql query.
 - Improve exception handling in leave request form.
+- Stock Move: added new field note 
 
 ## [5.1.7] - 2019-06-17
 ## Features

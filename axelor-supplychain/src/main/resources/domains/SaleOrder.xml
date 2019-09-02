@@ -31,6 +31,8 @@
 	   	<many-to-one name="forwarderPartner" ref="com.axelor.apps.base.db.Partner" title="Forwarder" />
 		<many-to-one name="incoterm" ref="com.axelor.apps.stock.db.Incoterm" />
 
+        <string name="stockMoveComment" title="Stock move comment" large="true"/>
+
       <boolean name="isNeedingConformityCertificate" title="Is certificate of conformity required"/>
       <boolean name="isIspmRequired" title="Is ISPM 15 required"/>
 

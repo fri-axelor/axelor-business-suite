@@ -280,7 +280,7 @@ public class SaleOrderStockServiceImpl implements SaleOrderStockService {
             toStockLocation,
             null,
             estimatedDeliveryDate,
-            saleOrder.getDescription(),
+            saleOrder.getStockMoveComment(),
             saleOrder.getShipmentMode(),
             saleOrder.getFreightCarrierMode(),
             saleOrder.getCarrierPartner(),

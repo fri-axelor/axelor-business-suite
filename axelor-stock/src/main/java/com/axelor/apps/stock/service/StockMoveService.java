@@ -48,7 +48,7 @@ public interface StockMoveService {
    * @param toStockLocation
    * @param realDate
    * @param estimatedDate
-   * @param description
+   * @param stockMoveComment
    * @param shipmentMode
    * @param freightCarrierMode
    * @param carrierPartner
@@ -67,7 +67,7 @@ public interface StockMoveService {
       StockLocation toStockLocation,
       LocalDate realDate,
       LocalDate estimatedDate,
-      String note,
+      String stockMoveComment,
       ShipmentMode shipmentMode,
       FreightCarrierMode freightCarrierMode,
       Partner carrierPartner,
@@ -92,7 +92,7 @@ public interface StockMoveService {
    * @param toStockLocation
    * @param realDate
    * @param estimatedDate
-   * @param description
+   * @param stockMoveComment
    * @param typeSelect
    * @return
    * @throws AxelorException No Stock move sequence defined
@@ -105,7 +105,7 @@ public interface StockMoveService {
       StockLocation toStockLocation,
       LocalDate realDate,
       LocalDate estimatedDate,
-      String note,
+      String stockMoveComment,
       int typeSelect)
       throws AxelorException;
 

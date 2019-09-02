@@ -14,6 +14,8 @@
     <decimal name="amountInvoiced" title="Amount invoiced W.T." readonly="true"/>
     
   	<many-to-one name="stockLocation" ref="com.axelor.apps.stock.db.StockLocation" title="Stock location"/>
+
+	<string name="stockMoveComment" title="Stock move comment" large="true"/>
   	
   	<one-to-many name="timetableList" ref="com.axelor.apps.supplychain.db.Timetable" title="Timetable" mappedBy="purchaseOrder"/>
 	<date name="expectedRealisationDate" title="Expected realisation date"/>

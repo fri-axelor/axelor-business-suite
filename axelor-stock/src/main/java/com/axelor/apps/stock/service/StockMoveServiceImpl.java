@@ -114,7 +114,7 @@ public class StockMoveServiceImpl implements StockMoveService {
    * @param toStockLocation
    * @param realDate
    * @param estimatedDate
-   * @param note
+   * @param stockMoveComment
    * @param shipmentMode
    * @param freightCarrierMode
    * @param carrierPartner
@@ -133,7 +133,7 @@ public class StockMoveServiceImpl implements StockMoveService {
       StockLocation toStockLocation,
       LocalDate realDate,
       LocalDate estimatedDate,
-      String note,
+      String stockMoveComment,
       ShipmentMode shipmentMode,
       FreightCarrierMode freightCarrierMode,
       Partner carrierPartner,
@@ -151,7 +151,7 @@ public class StockMoveServiceImpl implements StockMoveService {
             toStockLocation,
             realDate,
             estimatedDate,
-            note,
+            stockMoveComment,
             typeSelect);
     stockMove.setPartner(clientPartner);
     stockMove.setShipmentMode(shipmentMode);
@@ -159,7 +159,7 @@ public class StockMoveServiceImpl implements StockMoveService {
     stockMove.setCarrierPartner(carrierPartner);
     stockMove.setForwarderPartner(forwarderPartner);
     stockMove.setIncoterm(incoterm);
-    stockMove.setNote(note);
+    stockMove.setStockMoveComment(stockMoveComment);
     stockMove.setIsIspmRequired(stockMoveToolService.getDefaultISPM(clientPartner, toAddress));
 
     return stockMove;
@@ -175,7 +175,7 @@ public class StockMoveServiceImpl implements StockMoveService {
    * @param toStockLocation
    * @param realDate
    * @param estimatedDate
-   * @param note
+   * @param stockMoveComment
    * @param typeSelect
    * @return
    * @throws AxelorException No Stock move sequence defined
@@ -189,7 +189,7 @@ public class StockMoveServiceImpl implements StockMoveService {
       StockLocation toStockLocation,
       LocalDate realDate,
       LocalDate estimatedDate,
-      String note,
+      String stockMoveComment,
       int typeSelect)
       throws AxelorException {
 
@@ -208,7 +208,7 @@ public class StockMoveServiceImpl implements StockMoveService {
     stockMove.setEstimatedDate(estimatedDate);
     stockMove.setFromStockLocation(fromStockLocation);
     stockMove.setToStockLocation(toStockLocation);
-    stockMove.setNote(note);
+    stockMove.setStockMoveComment(stockMoveComment);
     stockMove.setPrintingSettings(
         Beans.get(TradingNameService.class).getDefaultPrintingSettings(null, company));
 
@@ -691,7 +691,7 @@ public class StockMoveServiceImpl implements StockMoveService {
             stockMove.getFromStockLocation(),
             null,
             stockMove.getEstimatedDate(),
-            null,
+            stockMove.getStockMoveComment(),
             null,
             null,
             null,
