@@ -9,7 +9,7 @@ apply {
 
 axelor {
 	title "Axelor Account"
-	description "Axelor Account Module"
+	description "Axelor Account Module test"
 }
 
 dependencies {
