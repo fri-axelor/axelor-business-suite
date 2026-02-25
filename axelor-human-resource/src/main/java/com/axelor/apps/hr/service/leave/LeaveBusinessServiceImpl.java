@@ -52,7 +52,6 @@ public class LeaveBusinessServiceImpl implements LeaveBusinessService {
   }
 
   @Override
-  @Transactional
   public LeaveLine processLeaveReasonToJustify(LeaveRequest leave) throws AxelorException {
     Employee employee = leave.getEmployee();
     if (employee == null || !leave.getToJustifyLeaveReason()) {
